@@ -15,4 +15,6 @@
 /tmp
 
 # don't checkin database configuration
-config/database.yml
+/config/database.yml
+
+/.idea
