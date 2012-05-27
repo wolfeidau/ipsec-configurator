@@ -7,6 +7,9 @@ gem 'rails', '3.2.3'
 
 gem 'pg'
 
+gem 'gravatar_image_tag'
+gem 'simple_form'
+gem 'friendly_id'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,16 +26,16 @@ end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
@@ -40,9 +43,18 @@ gem 'jquery-rails'
 gem 'rspec-rails', :group => [:test, :development]
 
 group :test do
+
   gem 'factory_girl_rails'
+  gem 'database_cleaner'
   gem 'capybara'
   gem 'guard-rspec'
+  gem 'launchy'
+
+  if RUBY_PLATFORM.downcase.include?("darwin")
+    gem 'rb-fsevent'
+    gem 'growl'
+  end
+
 end
 
 group :development do

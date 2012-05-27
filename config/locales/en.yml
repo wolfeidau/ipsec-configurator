@@ -1,5 +1,14 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  user:
+    updated: Successfully saved profile.
+    not_updated: Unable to save profile.
+    created: "Thank you for signing up!"
+    username:
+      invalid: "Only letters allowed"
+
+  session:
+    login_success: "Logged in!"
+    login_failed: "Email or password is invalid"
+    logout: "Logged out!"
+
+
