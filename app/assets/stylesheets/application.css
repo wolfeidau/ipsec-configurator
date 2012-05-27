@@ -10,6 +10,8 @@
  *
  *= require_self
  *= require_tree .
+ *= require bootstrap/bootstrap
+ *= require bootstrap/bootstrap-responsive
 */
 
 body {
