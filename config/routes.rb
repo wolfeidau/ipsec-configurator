@@ -1,4 +1,18 @@
 IpsecConfigurator::Application.routes.draw do
+
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+  get 'settings', to: 'users#edit', as: 'settings'
+
+  resources :users
+  resources :sessions
+
+  get 'about', to: 'welcome#about', as: 'about'
+  get 'contact', to: 'welcome#contact', as: 'contact'
+
+  root :to => 'welcome#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +62,6 @@ IpsecConfigurator::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 
