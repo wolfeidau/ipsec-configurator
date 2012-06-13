@@ -2,13 +2,16 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+# Postgresql driver
 gem 'pg'
 
+# Gravatar for user avatars
 gem 'gravatar_image_tag'
+
+# Simple form used for twitter bootstrap styled forms.
 gem 'simple_form'
+
+# Friendly Identifier is used to enable freindly url slugs.
 gem 'friendly_id'
 
 # Gems used only for assets and not required
@@ -28,22 +31,17 @@ gem 'jquery-rails'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
 # Use unicorn as the app server
 gem 'unicorn'
 
 # Deploy with Capistrano
 gem 'capistrano'
 
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
 gem 'rspec-rails', :group => [:test, :development]
 
 group :test do
 
+  # testing stuff
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'capybara'
@@ -58,6 +56,11 @@ group :test do
 end
 
 group :development do
+
+  # webrick alternative that is quite
   gem 'thin'
+
+  # stops asset requests being logged
   gem 'quiet_assets'
+
 end
