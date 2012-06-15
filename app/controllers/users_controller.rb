@@ -1,3 +1,6 @@
+# Author:: Mark Wolfe (mailto:mark@wolfe.id.au)
+
+# This controller holds actions for user registration and profile updates.
 class UsersController < ApplicationController
 
   def new
